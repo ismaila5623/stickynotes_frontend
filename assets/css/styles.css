@@ -8,6 +8,7 @@
     --color-green--light: lightgreen;
     --color-green--thin: rgb(195, 236, 195);
     --color-red: red;
+    --color-yellow: rgb(226, 250, 8);
     --color-black: black;
     --color-black--medium: rgb(20, 19, 19);
     --color-black--light: rgb(29, 28, 28);
@@ -47,6 +48,7 @@
     --edit-color: var(--color-gray);
     --delete-font: var(--font-small--x2);
     --delete-color: var(--color-red);
+    --cancel-color: var(--color-yellow);
     --note-title--font: var(--font-large--x2);
     --note-title--color: ;
     --note-font: var(--font-medium);
@@ -448,6 +450,11 @@ body {
     padding: .1em .2em;
 }
 
+.categories-edit--input {
+    height: 100%;
+    width: 100%;
+}
+
 .categories-name {
     flex: 1;
     word-wrap: break-word;
@@ -476,7 +483,8 @@ body {
 
 .save,
 .edit,
-.delete {
+.delete,
+.cancel {
     font-size: var(--save-font);
     padding: .1em .3em;
     border-right: 2px solid var(--color-white);
@@ -492,6 +500,10 @@ body {
 
 .delete {
     color: var(--delete-color);
+}
+
+.cancel {
+    color: var(--cancel-color);
 }
 
 @media(max-width:750px) {
