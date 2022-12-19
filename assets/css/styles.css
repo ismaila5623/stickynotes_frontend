@@ -413,6 +413,7 @@ body {
 .categories {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .categories-title {}
@@ -458,6 +459,7 @@ body {
 
 .categories-name {
     flex: 1;
+    width: 60%;
     word-wrap: break-word;
     font-size: var(--category-font);
     font-family: sans-serif;
