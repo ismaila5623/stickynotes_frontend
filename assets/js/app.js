@@ -7,26 +7,23 @@ let navItemContainer = document.querySelector('.nav .nav-item--container')
 menuIconContainers.forEach(menuIconContainer => {
     menuIconContainer.addEventListener('click', e => {
         menuIconContainer.classList.toggle('close')
-        if (getTargetParent(e.target).classList.contains('nav')) {
+        if (getTargetParent(e.target, 'nav').classList.contains('nav')) {
             navbarToggle()
-        } else if (getTargetParent(e.target).classList.contains('categories-container')) {
+        } else if (getTargetParent(e.target, 'sidebar').classList.contains('sidebar')) {
             sidebarToggle()
         }
     })
 })
 
-categoriesName.forEach(categoryName => {
-    marquee(categoryName)
-})
-
-marquee(title[1])
-
-function getTargetParent(el) {
+function getTargetParent(el, parentClass) {
     let newEl = el;
-    while (!newEl.classList.contains('contained-menu')) {
+    while (!newEl.classList.contains(parentClass)) {
+        if (newEl.tagName.toLowerCase() == 'body') {
+            break;
+        }
         newEl = newEl.parentElement;
     }
-    return newEl.parentElement;
+    return newEl;
 }
 
 function navbarToggle() {
