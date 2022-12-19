@@ -476,6 +476,10 @@ body {
     color: var(--color-white);
 }
 
+.categories-item:nth-child(even) .categories-tools .cancel {
+    color: var(--color-yellow--orange);
+}
+
 .categories-tools {
     width: 80px;
     align-self: flex-end;
