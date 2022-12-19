@@ -43,7 +43,6 @@ function sidebarToggle() {
 }
 
 function marquee(tag) {
-    let tagWidth = tag.getBoundingClientRect().width;
     if (exceedsLimit(tag)) {
         let marquee = document.createElement('marquee');
         marquee.textContent = tag.textContent;
