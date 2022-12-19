@@ -491,6 +491,7 @@ body {
     font-size: var(--save-font);
     padding: .1em .3em;
     border-right: 2px solid var(--color-white);
+    cursor: pointer;
 }
 
 .save {
