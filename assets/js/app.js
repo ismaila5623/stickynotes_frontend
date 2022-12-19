@@ -1,4 +1,4 @@
-let title = document.querySelectorAll('.title')
+let titles = document.querySelectorAll('.title')
 let categoriesName = document.querySelectorAll('.categories-name')
 let menuIconContainers = document.querySelectorAll('.menu-icon--container')
 let sidebar = document.querySelector('.sidebar')
@@ -16,7 +16,9 @@ let notes = document.querySelector('.notes')
 let emptyCategoryText = 'The category is empty'
 let emptyNoteText = 'The note is empty'
 
-marquee(title[1])
+titles.forEach(title=>{
+    marquee(title)
+})
 createCategoryEl(1, 'Default')
     // createNoteEl('')
 empty(emptyNoteText, notes)
