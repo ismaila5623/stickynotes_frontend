@@ -83,7 +83,6 @@ function noteClick(el) {
             noteFileDialog(elParent)
             break;
     }
-    empty(emptyCategoryText, categoriesItemContainer)
 }
 
 function noteEdit(el) {
